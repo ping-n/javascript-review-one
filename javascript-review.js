@@ -4,7 +4,9 @@
 // Create an object that has four properties. One property should be set so that the value is a number, another property set to a string, the third to an array, and the fourth to a function. This function should simply console.log the value of the first property.
 
 // 2.
-// Write a factory function (to create objects) that takes one argument. It should use that argument to set the value of the first key of the object. The second key should be given the value ‘red’. 
+// Write a constructor function (to create objects) that takes one argument. It should use that argument to set the value of the first attribute of the object. There should be a second attribute that stores the value ‘red’. 
+
+// Note that a factory function is the old school syntax that was used in javascript before the sugar class syntax came along. 
 
 // 3.
 // Can you access variables defined outside of functions within the scope of functions in JS? Show a simple example of this being used? (Define a constant in global scope and use that in a very simple function.)
@@ -89,3 +91,64 @@
 // Explain in your own words how this code works. For example you could start with something like:
 
 // "Firstly, the letNum variable is initialized and receives the value of the number 1. Secondly, the myFunc function is invoked. It received the arguments of..." 
+
+// 21.
+
+// a. Uncomment the code from below
+
+// this is a constructor function, it's another syntax for creating objects similar to the constructor function syntax
+
+// function Person(name) {
+//   function sayHi() {
+//     console.log('hello')
+//   }
+//   return {
+//     name,
+//     sayHi
+//   }
+// }
+
+// const harrison = Person("harrison")
+
+// b. 
+// What does this function return?
+
+// c.
+// How do you call the sayHi() function?
+
+// 22. 
+
+// Using the code from above as a template write implement the same logic using the class sugar syntax 
+// Note that you'll need to comment out the code from above for this to work
+
+// 23. 
+
+// Define a function named waitBeforeSum that takes 2 numbers as arguments. Your function should sum these numbers together but only after waiting for 4 seconds inside of a setTimeout.
+
+// What do we need to use to access the value in the setTimeout only after the 4 seconds? Write the code to achieve this.
+
+// When we invoke waitBeforeSum we'll have two different options to avoid getting a pending promise. What are these 2 options?
+
+// Define another function named accessSum and make it an async function. Using the await keyword call waitBeforeSum inside of the accessSum function and store the resolve in a variable called result. console.log the result inside of the async function
+
+// Add a try and catch block to your accessSum function, make it go into the catch when the sum is greater than 10, when you console.log the the error that you get as a parameter in the catch it should say 'the sum was greater than 10'
+
+// 24. 
+
+// a. 
+// run the following commands
+// npm init -y
+// npm install node-fetch
+
+// b. 
+// Using the following API endpoint access the Australian flag svg link and console.log it
+// => https://restcountries.eu/rest/v2/all
+
+// 25. 
+
+// a. 
+
+// In this directory create a new folder named dom
+
+// Inside of the dom directory create these two files index.html and script.js
+
