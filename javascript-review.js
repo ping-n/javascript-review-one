@@ -147,8 +147,10 @@
 // 25. 
 
 // a. 
-
 // In this directory create a new folder named dom
 
+// b.
 // Inside of the dom directory create these two files index.html and script.js
 
+// c.
+// Append the following elements to the body of the index.html using javascript, it should look like this https://dl.dropboxusercontent.com/s/qudmuyn8tpvyhtc/javascript_site.png
