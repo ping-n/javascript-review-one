@@ -150,6 +150,10 @@
 // Using the following API endpoint access the Australian flag svg link and console.log it
 // => https://restcountries.eu/rest/v2/all
 
+// c.
+// Using the following API endpoint console.log all the characters actual names, not just the character API endpoint 
+// => https://swapi.co/api/films/1/
+
 // 25. 
 
 // a. 
