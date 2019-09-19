@@ -151,7 +151,7 @@
 // => https://restcountries.eu/rest/v2/all
 
 // c.
-// Using the following API endpoint console.log all the characters actual names, not just the character API endpoint 
+// Using the following API endpoint console.log all the characters names, you'll need to perform a nested fetch 
 // => https://swapi.co/api/films/1/
 
 // 25. 
