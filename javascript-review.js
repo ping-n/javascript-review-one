@@ -45,7 +45,7 @@
 // Define a function called addNum with that takes two number arguments. In this function simply return the addition of these numbers. Write a second function called numsPlusFunct that takes three arguments, two numbers and a function. Inside numsPlusFunct call the function that is passed as an argument, and pass the two number arguments to this function. numsPlusFunct will return an object where the first property has the value returned from that function call, and the second property is a string. You have now made two functions. Call the numsPlusFunct and pass addNum as the appropriate argument. 
 
 // 16.
-// What is Express? What does it help us to do? Often we use ‘req’ and ‘res’ in our Express/Node code. Very briefly outline what these are.
+// What is Express? What does it help us to do?
 
 // 17.
 // What is the difference between synchronous and asynchronous code? Name some ways that JS deals with the issue of asynchronous code. 
