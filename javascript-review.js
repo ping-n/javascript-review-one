@@ -96,7 +96,7 @@
 
 // a. Uncomment the code from below
 
-// this is a constructor function, it's another syntax for creating objects similar to the constructor function syntax
+// // this is a factory function, it's another syntax for creating objects similar to the constructor function syntax
 
 // function Person(name) {
 //   function sayHi() {
