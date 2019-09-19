@@ -44,13 +44,13 @@
 
 // 15.
 
-// a
+// a.
 // Define a function called addNum with that takes two number arguments. In this function simply return the addition of these numbers. 
 
-// b
+// b.
 // Write a second function called numsPlusFunct that takes three arguments, two numbers and a function. Inside numsPlusFunct call the function that is passed as an argument, and pass the two number arguments to this function. numsPlusFunct will return an object where the first property has the value returned from that function call, and the second property is a string. 
 
-// c
+// c.
 // You have now made two functions. Call the numsPlusFunct and pass addNum as the appropriate argument. 
 
 // 16.
@@ -64,3 +64,28 @@
 
 // 19.
 // A JS object looks like this: const southernField = { location: “upper”, crop: “sorghum”, watered: false }. Use destructuring to store the value of watered in a variable.
+
+// 20.
+
+// a.
+// Uncomment the code below.
+
+// let newNum = 1
+
+// const myFunc = (num, callback) => {
+//   newNum *= num
+//   callback(newNum)
+// }
+
+// myFunc(10, (sum) => {
+//   myFunc(10, (sum) => {
+//     myFunc(10, (sum) => {
+//       console.log(sum)
+//     })
+//   })
+// })
+
+// b.
+// Explain in your own words how this code works. For example you could start with something like:
+
+// "Firstly, the letNum variable is initialized and receives the value of the number 1. Secondly, the myFunc function is invoked. It received the arguments of..." 
