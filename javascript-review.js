@@ -123,7 +123,9 @@
 // Note that you'll need to comment out the code from above for this to work
 
 // b. 
-// Implement another instance method for your class that takes in age and height as arguments (number and string datatype respectively) and adds these arguments as attributes to your person object, console.log the updated person object showing all three attributes (name, age, height)
+// Implement another instance method for your class that takes in age and height (in cms) as arguments (both number type) and adds these arguments as attributes to your person object
+
+// console.log the updated person object showing all three attributes (name, age, height) as being a part of the person object
 
 // 23. 
 
