@@ -118,8 +118,12 @@
 
 // 22. 
 
-// Using the code from above as a template write implement the same logic using the class sugar syntax 
+// a. 
+// Using the code from above as a template, implement the same functionality using the class sugar syntax 
 // Note that you'll need to comment out the code from above for this to work
+
+// b. 
+// Implement another instance method for your class that takes in age and height as arguments (number and string datatype respectively) and adds these arguments as attributes to your person object, console.log the updated person object showing all three attributes (name, age, height)
 
 // 23. 
 
