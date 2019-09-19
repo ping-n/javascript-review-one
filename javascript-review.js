@@ -6,7 +6,7 @@
 // 2.
 // Write a constructor function (to create objects) that takes one argument. It should use that argument to set the value of the first attribute of the object. There should be a second attribute that stores the value ‘red’. 
 
-// Note that a factory function is the old school syntax that was used in javascript before the sugar class syntax came along. 
+// Note that a constructor function is the old school syntax that was used in javascript before the sugar class syntax came along. 
 
 // 3.
 // Can you access variables defined outside of functions within the scope of functions in JS? Show a simple example of this being used? (Define a constant in global scope and use that in a very simple function.)
