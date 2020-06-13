@@ -1,4 +1,4 @@
-// You may NOT use Google. These questions are to test how you are progressing through the material, and to give you some feedback about where you might improve. Get through as many of these as you can. If you don’t get through all of them it’s ok - the test is designed to be difficult. If you can’t remember a bit of code, write the pseudo-code that represents how you would write your JS code.
+// These questions are to test how you are progressing through the material, and to give you some feedback about where you might improve. Get through as many of these as you can. If you don’t get through all of them it’s ok - the test is designed to be difficult. If you can’t remember a bit of code, write the pseudo-code that represents how you would write your JS code.
 
 // 1.
 
@@ -6,9 +6,9 @@
 
 // 2.
 
-// Write a constructor function (to create objects) that takes one argument. It should use that argument to set the value of the first attribute of the object. There should be a second attribute that stores the value ‘red’. 
+// Write a constructor function named Car that takes one argument. It should use that argument to set the brand attribute of the car object. There should be a second attribute that stores the value for colour but this should be explicitly set to ‘red’. 
 
-// Note that a constructor function is the old school syntax that was used in javascript before the sugar class syntax came along. 
+// Note that a constructor function is the old school syntax that was used in javascript before the sugar class syntax came along in ES6. Don't use the sugar syntax for this question! 
 
 // 3.
 
@@ -24,7 +24,7 @@
 
 // 6.
 
-// What is a callback?
+// What is a callback function?
 
 // 7.
 
@@ -36,27 +36,34 @@
 
 // 9.
 
-// What are the two methods at our disposal if we have hold of a promise? What are the names of the functions that are related to these functions (that are called when the promise is fulfilled or fails).
+// What are the two functions at our disposal if we are defining our own promise?
+// Hint: They're in the new Promise callback function as parameters. 
 
 // 10.
 
-// What is the DOM?
+// What's the different between the rest and spread syntax?
 
-// 11.
+// 11. 
 
-// Create an object that has three properties. One property is called ‘count’ and will be set to a number, the second will be set to an array, and the third to a function. This function should simply console.log each of the values of the second property on a new line.
+// Define a function myFunc(), it should take 3 number arguments, use the rest syntax in the myFunc parameters and console.log out the value generated from the rest. 
 
 // 12.
 
-// What is NPM? In your brief explanation refer to package.json.
+// What is a javascript package manager? Name the 2 main package managers
 
 // 13.
 
-// What are Event Listeners? Gives some examples in your response.
+// What is a package.json? What is it similar to when comparing it to ruby?
 
 // 14.
 
-// Define a function called numMult that takes two number arguments and a callback. The function will multiply the two numbers and pass the result to the callback as an argument. Now call numMult and in the callback simply console.log out the argument that has been passed through.
+// a. 
+// run the following command
+// npm init -y
+
+// b. 
+// Install the package that allows us to get user input in node
+// Store the result of the user input in a variable name then console.log the value of the variable on the subsequent line 
 
 // 15.
 
@@ -71,11 +78,12 @@
 
 // 16.
 
-// What is Express? What does it help us to do?
+// Define a .txt file and put this text into it => "hello world"
+// Using the fs module in node read this text from the file into this program and console.log it
 
 // 17.
 
-// What is the difference between synchronous and asynchronous code? Name some ways that JS deals with the issue of asynchronous code. 
+// What is the difference between synchronous and asynchronous code? Name one way that JS handles asynchronous code. 
 
 // 18.
 
@@ -98,11 +106,7 @@
 // }
 
 // myFunc(10, (sum) => {
-//   myFunc(10, (sum) => {
-//     myFunc(10, (sum) => {
-//       console.log(sum)
-//     })
-//   })
+//   console.log(sum)
 // })
 
 // b.
@@ -112,36 +116,31 @@
 
 // 21.
 
-// a. Uncomment the code from below
+// You might remember the .times method in ruby
 
-// // this is a factory function, it's another syntax for creating objects similar to the constructor function syntax
+// You could do something like this
 
-// function Person(name) {
-//   function sayHi() {
-//     console.log('hello')
-//   }
-//   return {
-//     name,
-//     sayHi
-//   }
-// }
+// 5.times do 
+  // code
+// end
 
-// const harrison = Person("harrison")
+// Define a function times() that takes a number and a callback as an argument, the number represents how many times a loop should run, and the callback is the code that is executed each time the loop runs
 
-// b. 
-// What does this function return?
+// Double check the loop is actually running 5 times if you pass in 5 with a console.log in the callback
 
-// c.
-// How do you call the sayHi() function?
+// You should see 5 outputs
 
 // 22. 
 
-// a. 
-// Using the code from above as a template, implement the same functionality using the class sugar syntax 
-// Note that you'll need to comment out the code from above for this to work
+// Define a Person class, the constructor should take name as an argument and set the name to the this, the class should have a prototype method sayHi() that simply outputs console.log("hello")
 
-// b. 
-// Implement another instance method for your class that takes in age and height (in cms) as arguments (both number type) and adds these arguments as attributes to your person object
+// Implement another prototype method addAgeAndHeight() for your class that takes in age and height (in cms) as arguments (both number type) and adds these arguments as attributes to your person object
+
+// Create a new person and pass in name as an argument, console.log the person object
+
+// Call the sayHi() method on the person
+
+// Call the addAgeAndHeight() method passing in the relevant arguments
 
 // console.log the updated person object showing all three attributes (name, age, height) as being a part of the person object
 
@@ -151,7 +150,7 @@
 
 // What do we need to use to access the value in the setTimeout only after the 4 seconds? Write the code to achieve this.
 
-// When we invoke waitBeforeSum we'll have two different options to avoid getting a pending promise. What are these 2 options?
+// When we invoke waitBeforeSum we'll have two different methods we can chain to our promise to avoid getting a pending promise. What are these 2 methods?
 
 // Define another function named accessSum and make it an async function. Using the await keyword call waitBeforeSum inside of the accessSum function and store the resolve in a variable called result. console.log the result inside of the async function
 
@@ -160,8 +159,6 @@
 // 24. 
 
 // a. 
-// run the following commands
-// npm init -y
 // npm install node-fetch
 
 // b. 
@@ -169,16 +166,130 @@
 // => https://restcountries.eu/rest/v2/all
 
 // c.
-// Using the following API endpoint console.log all the characters names, you'll need to perform a nested fetch 
-// => https://swapi.co/api/films/1/
+// Using the following API endpoint console.log the yoda text generated from this english phrase "Master Obiwan has lost a planet" 
+// Hint: you don't need to pay for a subscription 
+// => https://funtranslations.com/api/yoda
 
-// 25. 
+// 🎉🎉🎉
 
-// a. 
-// In this directory create a new folder named dom
+// Extra challenges
 
-// b.
-// Inside of the dom directory create these two files index.html and script.js
+// Only attempt this if you've completely done everything else
 
-// c.
-// Append the following elements to the body of the index.html using javascript, it should look like this https://dl.dropboxusercontent.com/s/qudmuyn8tpvyhtc/javascript_site.png
+// You'll need to globally install mocha
+
+// npm install --global mocha
+
+// You'll also need to uncomment this code
+
+// const assert = require('assert');
+
+// To run the tests use => mocha <filename> from the command line
+
+// 25.
+
+/*
+Once
+Creates a version of the function that can only be called one time.
+Repeated calls to the modified function will have no effect, returning the value
+from the original call. Useful for initialization functions, instead of having
+to set a boolean flag and then check it later.
+
+Example:
+let total = 0
+const count = () => ++total;
+let countOnce = once(count);
+countOnce()
+=> 1
+countOnce()
+=> 1
+*/
+
+// describe('Once', () => {
+//   it('returns a function', () => {
+//     const exampleOnce = once(() => {})
+//     assert.equal(typeof exampleOnce, 'function');
+//   });
+//   it('only runs once', () => {
+//     let total = 0;
+//     const count = () => {
+//       return ++total;
+//     }
+
+//     const countOnce = once(count);
+//     assert.equal(countOnce(), 1);
+//     assert.equal(countOnce(), 1);
+//   });
+// });
+
+// 26.
+
+/*
+Count By
+Sorts a list into groups and returns a count for the number of objects in each
+group. Similar to groupBy, but instead of returning a list of values, returns a
+count for the number of values in that group.
+
+Example:
+_.countBy([1, 2, 3, 4, 5], (num) => {
+  return num % 2 == 0 ? 'even': 'odd';
+});
+=> {odd: 3, even: 2}
+*/
+
+// describe('Count By', () => {
+//   it('can group true/false', () => {
+//     let grouped = countBy([1, 2, 3, 4, 5], (num) => num % 2 === 0);
+//     assert.equal(grouped.true, 2);
+//     assert.equal(grouped.false, 3);
+//   })
+//   it('can group lists', () => {
+//     const list = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten'];
+//     const grouped = countBy(list, (numWord) => numWord.length);
+//     assert.equal(grouped['3'], 4);
+//     assert.equal(grouped['4'], 3);
+//     assert.equal(grouped['5'], 3);
+//   })
+// });
+
+// 27.
+
+/*
+Find Last Index
+Like _.findIndex but iterates the array in reverse, returning the index closest
+to the end where the predicate truth test passes.
+
+Example:
+const users = [{'id': 1, 'name': 'Bob', 'last': 'Brown'},
+             {'id': 2, 'name': 'Ted', 'last': 'White'},
+             {'id': 3, 'name': 'Frank', 'last': 'James'},
+             {'id': 4, 'name': 'Ted', 'last': 'Jones'}];
+_.findLastIndex(users, {
+  name: 'Ted'
+});
+=> 3
+*/
+
+// let result;
+// describe('Find Last Index', () => {
+//   it('finds the last index', () => {
+//     const objects = [
+//       {a: 0, b: 0},
+//       {a: 1, b: 1},
+//       {a: 2, b: 2},
+//       {a: 0, b: 0}
+//     ];
+//     result = findLastIndex(objects, {a: 0});
+//     assert.equal(result, 3);
+//   })
+//   it('also finds last index', () => {
+//     const dogs = [
+//       {name: 'tilly', age: 5},
+//       {name: 'sally', age: 10},
+//       {name: 'rex', age: 10},
+//       {name: 'macy', age: 4}
+//     ];
+//     result = findLastIndex(dogs, {age: 10});
+//     assert.equal(result, 2)
+//   })
+// });
