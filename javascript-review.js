@@ -277,29 +277,65 @@ Person.prototype.addAgeAndHeight = function(age, height) {
 
 const person = new Person('name')
 
-console.log(person);
+// console.log(person);
 
 // Call the sayHi() method on the person
 
-person.sayHi()
+// person.sayHi()
 
 // Call the addAgeAndHeight() method passing in the relevant arguments
 
-person.addAgeAndHeight(26, 180)
+// person.addAgeAndHeight(26, 180)
 
 // console.log the updated person object showing all three attributes (name, age, height) as being a part of the person object
 
-console.log(person);
+// console.log(person);
 
 // 23. 
 
 // Define a function named waitBeforeSum that takes 2 numbers as arguments. Your function should sum these numbers together but only after waiting for 4 seconds inside of a setTimeout.
 
+// const waitBeforeSum = (num1, num2) => {
+//   setTimeout(() =>{
+//     num1 + num2;
+//   },4000);
+// };
+
 // What do we need to use to access the value in the setTimeout only after the 4 seconds? Write the code to achieve this.
+
+// const waitBeforeSum = (num1, num2) => {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         let answer = num1 + num2;
+
+//         if (isNaN(answer)) {
+//             reject(new Error("Input needs to be a number"));
+//         }
+
+//         resolve(answer);
+//     }, 4000);
+// });
+// }
+
 
 // When we invoke waitBeforeSum we'll have two different methods we can chain to our promise to avoid getting a pending promise. What are these 2 methods?
 
+// waitBeforeSum(7, 10)
+//   .then((result) => {console.log(result)})
+//   .catch((err) => {console.log(err)});
+
 // Define another function named accessSum and make it an async function. Using the await keyword call waitBeforeSum inside of the accessSum function and store the resolve in a variable called result. console.log the result inside of the async function
+
+// const accessSum = async () => {
+//   try {
+//     const result = await waitBeforeSum(7, 10);
+//     console.log(result);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// };
+
+// accessSum()
 
 // Add a try and catch block to your accessSum function, make it go into the catch when the sum is greater than 10, when you console.log the the error that you get as a parameter in the catch it should say 'the sum was greater than 10'
 
