@@ -68,11 +68,16 @@ const coolCar = () => {
 
 // Define a function with that takes two number arguments and a callback. The function will add the two numbers and pass them to the callback as an argument. Now call this function and in the callback simply console.log out the argument that has been passed through.
 
-const function2 = (num1, num2) => {
-  return num1 + num2
-};
+// const function2 = (num1, num2, cb) => {
+//   const result = num1 + num2
+//   cb(result)
+// };
 
-// console.log(function2(2,3));
+// const callback = (result) => {
+//   console.log(result)
+// };
+
+// function2(2,3, callback);
 
 // 8.
 
@@ -237,21 +242,46 @@ const numsPlusFunct = (num1, num2, cb) => {
 
 // You should see 5 outputs
 
-const times = (num, callcack) => {
+// const times = (num, callback) => {
+//   for (let i = 0; i < num; i++){
+//     callback();
+//   }
+// };
 
-}
-
-console.log();
+// times(5, () => {console.log('hello')});
 
 // 22. 
 
 // Define a Person class, the constructor should take name as an argument and set the name to the this, the class should have a prototype method sayHi() that simply outputs console.log("hello")
 
+class Person{
+  constructor(name) {
+    this.name = name;
+  }
+
+  sayHi() {
+    console.log("Hello");
+  }
+};
+
+
+
 // Implement another prototype method addAgeAndHeight() for your class that takes in age and height (in cms) as arguments (both number type) and adds these arguments as attributes to your person object
+
+Person.prototype.addAgeAndHeight = function(age, height) {
+  this.age = age;
+  this.height = height;
+};
 
 // Create a new person and pass in name as an argument, console.log the person object
 
+const person = new Person('name')
+
+console.log(person);
+
 // Call the sayHi() method on the person
+
+person.sayHi()
 
 // Call the addAgeAndHeight() method passing in the relevant arguments
 
