@@ -1,3 +1,5 @@
+const readlineSync = require('readline-sync');
+
 // These questions are to test how you are progressing through the material, and to give you some feedback about where you might improve. Get through as many of these as you can. If you don’t get through all of them it’s ok - the test is designed to be difficult. If you can’t remember a bit of code, write the pseudo-code that represents how you would write your JS code.
 
 // 1.
@@ -53,38 +55,64 @@ const coolCar = () => {
 
 // What is JSON? Be clear but concise.
 
+// javascript Object Notation (JSON) is a lightweight data-interchange format, that uses human-readable text to store and transmit data objects consisting of key-value pair.
+
 // 6.
 
 // What is a callback function?
+
+// A callback function is a function passed into another function as an argument and invoked it inside he new function.
 
 // 7.
 
 // Define a function with that takes two number arguments and a callback. The function will add the two numbers and pass them to the callback as an argument. Now call this function and in the callback simply console.log out the argument that has been passed through.
 
+const function2 = (num1, num2) => {
+  return num1 + num2
+};
+
+// console.log(function2(2,3));
+
 // 8.
 
 // Why do we use promises?
+
+// A promise allow developer to use asynchronous code in a javascript environment.
 
 // 9.
 
 // What are the two functions at our disposal if we are defining our own promise?
 // Hint: They're in the new Promise callback function as parameters. 
 
+// The two functions are resolve() and reject()
+
 // 10.
 
 // What's the different between the rest and spread syntax?
+
+// The difference between the rest and spread syntax is that while spread copies everything, rest is used when we want to retrieve all remaining elements (or all existing elements) after a destructuring operation.
 
 // 11. 
 
 // Define a function myFunc(), it should take 3 number arguments, use the rest syntax in the myFunc parameters and console.log out the value generated from the rest. 
 
+const restFunc = (num1, num2, ...rest) => {
+  return rest
+};
+
+// console.log(restFunc(1,2,3,4,5));
+
 // 12.
 
 // What is a javascript package manager? Name the 2 main package managers
 
+// A JS package manager is program that allow developer to make use of dependencies/packages in their project. The two main package manager are npm and yarn.
+
 // 13.
 
 // What is a package.json? What is it similar to when comparing it to ruby?
+
+//package.json in a package manager is the dependencies for the application is defined, this is equivalent to the Gemlock file in Ruby where all the gem dependencies is defined.
 
 // 14.
 
@@ -95,6 +123,9 @@ const coolCar = () => {
 // b. 
 // Install the package that allows us to get user input in node
 // Store the result of the user input in a variable name then console.log the value of the variable on the subsequent line 
+
+var userName = readlineSync.question('May I have your name? ');
+console.log('Hi ' + userName + '!');
 
 // 15.
 
