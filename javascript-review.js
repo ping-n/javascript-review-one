@@ -1,3 +1,6 @@
+const readlineSync = require('readline-sync');
+const fs = require('fs');
+
 // These questions are to test how you are progressing through the material, and to give you some feedback about where you might improve. Get through as many of these as you can. If you don’t get through all of them it’s ok - the test is designed to be difficult. If you can’t remember a bit of code, write the pseudo-code that represents how you would write your JS code.
 
 // 1.
@@ -53,38 +56,69 @@ const coolCar = () => {
 
 // What is JSON? Be clear but concise.
 
+// javascript Object Notation (JSON) is a lightweight data-interchange format, that uses human-readable text to store and transmit data objects consisting of key-value pair.
+
 // 6.
 
 // What is a callback function?
+
+// A callback function is a function passed into another function as an argument and invoked it inside he new function.
 
 // 7.
 
 // Define a function with that takes two number arguments and a callback. The function will add the two numbers and pass them to the callback as an argument. Now call this function and in the callback simply console.log out the argument that has been passed through.
 
+// const function2 = (num1, num2, cb) => {
+//   const result = num1 + num2
+//   cb(result)
+// };
+
+// const callback = (result) => {
+//   console.log(result)
+// };
+
+// function2(2,3, callback);
+
 // 8.
 
 // Why do we use promises?
+
+// A promise allow developer to use asynchronous code in a javascript environment.
 
 // 9.
 
 // What are the two functions at our disposal if we are defining our own promise?
 // Hint: They're in the new Promise callback function as parameters. 
 
+// The two functions are resolve() and reject()
+
 // 10.
 
 // What's the different between the rest and spread syntax?
+
+// The difference between the rest and spread syntax is that while spread copies everything, rest is used when we want to retrieve all remaining elements (or all existing elements) after a destructuring operation.
 
 // 11. 
 
 // Define a function myFunc(), it should take 3 number arguments, use the rest syntax in the myFunc parameters and console.log out the value generated from the rest. 
 
+const restFunc = (num1, num2, ...rest) => {
+  return rest
+};
+
+// console.log(restFunc(1,2,3,4,5));
+
 // 12.
 
 // What is a javascript package manager? Name the 2 main package managers
 
+// A JS package manager is program that allow developer to make use of dependencies/packages in their project. The two main package manager are npm and yarn.
+
 // 13.
 
 // What is a package.json? What is it similar to when comparing it to ruby?
+
+//package.json in a package manager is the dependencies for the application is defined, this is equivalent to the Gemfile in Ruby where all the gem dependencies is defined.
 
 // 14.
 
@@ -96,33 +130,78 @@ const coolCar = () => {
 // Install the package that allows us to get user input in node
 // Store the result of the user input in a variable name then console.log the value of the variable on the subsequent line 
 
+// let userName = readlineSync.question('May I have your name? ');
+// console.log('Hi ' + userName + '!');
+
 // 15.
 
 // a.
 // Define a function called addNum with that takes two number arguments. In this function simply return the addition of these numbers. 
 
+const addNum = (num1, num2) => {
+  return num1 + num2;
+};
+
 // b.
 // Write a second function called numsPlusFunct that takes three arguments, two numbers and a function. Inside numsPlusFunct call the function that is passed as an argument, and pass the two number arguments to this function. numsPlusFunct will return an object where the first property has the value returned from that function call, and the second property is a string. 
 
+const numsPlusFunct = (num1, num2, cb) => {
+  return {key1 : cb(num1, num1), key2 : 'string'};
+};
+
+
 // c.
 // You have now made two functions. Call the numsPlusFunct and pass addNum as the appropriate argument. 
+
+// console.log(numsPlusFunct(2,3,addNum));
 
 // 16.
 
 // Define a .txt file and put this text into it => "hello world"
 // Using the fs module in node read this text from the file into this program and console.log it
 
+// fs.readFile('hello.txt', 'utf8', function(err, data) {
+//     if (err) throw err;
+//     console.log(data);
+// });
+
 // 17.
 
 // What is the difference between synchronous and asynchronous code? Name one way that JS handles asynchronous code. 
+
+// synchronous code will execute the code line by line from top to bottom. Asynchronous code take the line of code outside the normal flow and allow to the program to move on to the next line of code without waiting for the code to finish executed.
+
+// One way JS handles asynchronous code is through the use of AJAX.
 
 // 18.
 
 // What is fetch and how does it relate to AJAX? Give an example of how you would use it. What does fetch return? Give a very basic example of fetch.
 
+//Fetch is a web api designed to make XHR requests. This API was developed to make AJAX requests easier and replace the older, more complicated XHR requests.
+
+// I would use fetch to access information from a web api and use the data in my application.
+
+// Grab data from the spaceX api
+// const response = await fetch('https://api.spacexdata.com/v3/launches/upcoming');
+// if (!response.ok) {
+//     throw new Error(chalk.bold.redBright('Sorry something went wrong'));
+//   }
+// const data = await response.json();
+// return data;
+
 // 19.
 
 // A JS object looks like this: const southernField = { location: “upper”, crop: “sorghum”, watered: false }. Use destructuring to store the value of watered in a variable.
+
+// const southernField = {
+//   location : 'upper',
+//   crop : 'sorghum',
+//   watered: false
+// }
+
+// let { watered : status } = southernField;
+
+// console.log(status);
 
 // 20.
 
@@ -145,6 +224,8 @@ const coolCar = () => {
 
 // "Firstly, the letNum variable is initialized and receives the value of the number 1. Secondly, the myFunc function is invoked. It received the arguments of..." 
 
+// Firstly letNum is defined as a viable with the value of 1, the myFunc function is invoked on with an anonymous function passed in as a callback. The newNum is invoked in the myFunc function which take the num argument passed, it then multiply the num by the newNum and save it. The newNum is then passed in the callback function which console log the result on line 214.
+
 // 21.
 
 // You might remember the .times method in ruby
@@ -161,29 +242,100 @@ const coolCar = () => {
 
 // You should see 5 outputs
 
+// const times = (num, callback) => {
+//   for (let i = 0; i < num; i++){
+//     callback();
+//   }
+// };
+
+// times(5, () => {console.log('hello')});
+
 // 22. 
 
 // Define a Person class, the constructor should take name as an argument and set the name to the this, the class should have a prototype method sayHi() that simply outputs console.log("hello")
 
+class Person{
+  constructor(name) {
+    this.name = name;
+  }
+
+  sayHi() {
+    console.log("Hello");
+  }
+};
+
+
+
 // Implement another prototype method addAgeAndHeight() for your class that takes in age and height (in cms) as arguments (both number type) and adds these arguments as attributes to your person object
+
+Person.prototype.addAgeAndHeight = function(age, height) {
+  this.age = age;
+  this.height = height;
+};
 
 // Create a new person and pass in name as an argument, console.log the person object
 
+const person = new Person('name')
+
+// console.log(person);
+
 // Call the sayHi() method on the person
+
+// person.sayHi()
 
 // Call the addAgeAndHeight() method passing in the relevant arguments
 
+// person.addAgeAndHeight(26, 180)
+
 // console.log the updated person object showing all three attributes (name, age, height) as being a part of the person object
+
+// console.log(person);
 
 // 23. 
 
 // Define a function named waitBeforeSum that takes 2 numbers as arguments. Your function should sum these numbers together but only after waiting for 4 seconds inside of a setTimeout.
 
+// const waitBeforeSum = (num1, num2) => {
+//   setTimeout(() =>{
+//     num1 + num2;
+//   },4000);
+// };
+
 // What do we need to use to access the value in the setTimeout only after the 4 seconds? Write the code to achieve this.
+
+// const waitBeforeSum = (num1, num2) => {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//         let answer = num1 + num2;
+
+//         if (isNaN(answer)) {
+//             reject(new Error("Input needs to be a number"));
+//         }
+
+//         resolve(answer);
+//     }, 4000);
+// });
+// }
+
 
 // When we invoke waitBeforeSum we'll have two different methods we can chain to our promise to avoid getting a pending promise. What are these 2 methods?
 
+// waitBeforeSum(7, 10)
+//   .then((result) => {console.log(result)})
+//   .catch((err) => {console.log(err)});
+
 // Define another function named accessSum and make it an async function. Using the await keyword call waitBeforeSum inside of the accessSum function and store the resolve in a variable called result. console.log the result inside of the async function
+
+// const accessSum = async () => {
+//   try {
+//     const result = await waitBeforeSum(7, 10);
+//     console.log(result);
+//   } catch (error) {
+//     console.log(error);
+//   }
+// };
+
+// accessSum()
 
 // Add a try and catch block to your accessSum function, make it go into the catch when the sum is greater than 10, when you console.log the the error that you get as a parameter in the catch it should say 'the sum was greater than 10'
 
