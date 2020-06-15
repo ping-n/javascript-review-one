@@ -19,13 +19,35 @@ const object = {
 
 // Note that a constructor function is the old school syntax that was used in javascript before the sugar class syntax came along in ES6. Don't use the sugar syntax for this question! 
 
+function Car(brand, colour) {
+  this.brand = brand;
+  this.colour = colour;
+}
+
+let car1 = new Car("BMW", "Black");
+// console.log(car1);
+
 // 3.
 
 // Can you access variables defined outside of functions within the scope of functions in JS? Show a simple example of this being used? (Define a constant in global scope and use that in a very simple function.)
 
+// Yes, you can access variables defined outside of functions within the scope of functions in JS.
+
+let brand = "Honda"
+
+const coolCar = () => {
+  return `The brand of my car is ${brand}.`
+}
+
+// console.log(coolCar());
+
 // 4.
 
 // What two ways can be used to access the properties of objects in JS? Give examples of both (although assume the objects have been defined).
+
+// console.log(object.num);
+
+// console.log(object["num"]);
 
 // 5.
 
