@@ -113,7 +113,7 @@ const restFunc = (num1, num2, ...rest) => {
 
 // What is a package.json? What is it similar to when comparing it to ruby?
 
-//package.json in a package manager is the dependencies for the application is defined, this is equivalent to the Gemlock file in Ruby where all the gem dependencies is defined.
+//package.json in a package manager is the dependencies for the application is defined, this is equivalent to the Gemfile in Ruby where all the gem dependencies is defined.
 
 // 14.
 
@@ -164,13 +164,39 @@ const numsPlusFunct = (num1, num2, cb) => {
 
 // What is the difference between synchronous and asynchronous code? Name one way that JS handles asynchronous code. 
 
+// synchronous code will execute the code line by line from top to bottom. Asynchronous code take the line of code outside the normal flow and allow to the program to move on to the next line of code without waiting for the code to finish executed.
+
+// One way JS handles asynchronous code is through the use of AJAX.
+
 // 18.
 
 // What is fetch and how does it relate to AJAX? Give an example of how you would use it. What does fetch return? Give a very basic example of fetch.
 
+//Fetch is a web api designed to make XHR requests. This API was developed to make AJAX requests easier and replace the older, more complicated XHR requests.
+
+// I would use fetch to access information from a web api and use the data in my application.
+
+// Grab data from the spaceX api
+// const response = await fetch('https://api.spacexdata.com/v3/launches/upcoming');
+// if (!response.ok) {
+//     throw new Error(chalk.bold.redBright('Sorry something went wrong'));
+//   }
+// const data = await response.json();
+// return data;
+
 // 19.
 
 // A JS object looks like this: const southernField = { location: “upper”, crop: “sorghum”, watered: false }. Use destructuring to store the value of watered in a variable.
+
+// const southernField = {
+//   location : 'upper',
+//   crop : 'sorghum',
+//   watered: false
+// }
+
+// let { watered : status } = southernField;
+
+// console.log(status);
 
 // 20.
 
@@ -193,6 +219,8 @@ const numsPlusFunct = (num1, num2, cb) => {
 
 // "Firstly, the letNum variable is initialized and receives the value of the number 1. Secondly, the myFunc function is invoked. It received the arguments of..." 
 
+// Firstly letNum is defined as a viable with the value of 1, the myFunc function is invoked on with an anonymous function passed in as a callback. The newNum is invoked in the myFunc function which take the num argument passed, it then multiply the num by the newNum and save it. The newNum is then passed in the callback function which console log the result on line 214.
+
 // 21.
 
 // You might remember the .times method in ruby
@@ -208,6 +236,12 @@ const numsPlusFunct = (num1, num2, cb) => {
 // Double check the loop is actually running 5 times if you pass in 5 with a console.log in the callback
 
 // You should see 5 outputs
+
+const times = (num, callcack) => {
+
+}
+
+console.log();
 
 // 22. 
 
