@@ -285,7 +285,11 @@ person.sayHi()
 
 // Call the addAgeAndHeight() method passing in the relevant arguments
 
+person.addAgeAndHeight(26, 180)
+
 // console.log the updated person object showing all three attributes (name, age, height) as being a part of the person object
+
+console.log(person);
 
 // 23. 
 
